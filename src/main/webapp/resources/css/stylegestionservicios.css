@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.elbody {
+	background:linear-gradient(90deg, #cca466, #523c1b);
+}
+
+.enlaces {
+	font-size: 180px; 
+	border:solid green 10px;
+	border-radius:10px;
+}
+
+.enlaces:hover {
+	box-shadow:0px 0px 10px black;
+}

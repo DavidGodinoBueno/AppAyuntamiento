@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.elbody::-webkit-scrollbar {
+    width: 15px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+.elbody::-webkit-scrollbar-thumb {
+    background: #ff8000;
+    border-radius: 10px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.elbody::-webkit-scrollbar-thumb:hover {
+    background: #c46200;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.elbody::-webkit-scrollbar-thumb:active {
+    background-color: #c46200;
+}
+
+.elbody::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.elbody::-webkit-scrollbar-track:hover,
+.elbody::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+.elbody {
+	background:linear-gradient(90deg, #cca466, #523c1b);
+}
+
+.cuadroinfo {
+	background-color:#4a3711;
+}

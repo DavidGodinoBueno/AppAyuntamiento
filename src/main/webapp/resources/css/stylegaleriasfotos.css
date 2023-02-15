@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.thephoto {
+	display:none;
+}
+
+.verimagen {
+	display:block;
+}
+
+.cuadrofotos {
+	background-color:#4a3711;
+	border-radius:10px;
+	text-align:center;
+}

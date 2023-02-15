@@ -1,0 +1,130 @@
+<nav class="navbar navbar-expand-lg navbar-light ${lainterfaz.colornavegacion}">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img alt="" src="${pageContext.request.contextPath}/resources/img/icoayuntamiento.png" 
+    width="60px" height="60px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-light" aria-current="page" 
+          href="${pageContext.request.contextPath}/ControllerUsuario?keyword=IrAlHome">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/icousuario.png"
+            width="25px" height="25px"/>${nombreusuario}
+          </a>
+          <ul class="dropdown-menu col-sm-3 col-5" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item text-center" href="#">
+            <img src="${pageContext.request.contextPath}/ControllerUsuario?theuser=${nombreusuario}&keyword=mostrarfotoperfil" width="100px" height="100px"
+            style="border-radius:100%;"></a></li>
+            <li><a class="dropdown-item text-center" href="#"><strong>${nombreusuario}</strong></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-center text-danger" href="ControllerUsuario?keyword=CerrarSesion">
+             <img alt="" src="${pageContext.request.contextPath}/resources/img/icologout.png"
+            width="20px" height="20px"/>&nbsp;&nbsp;Cerrar sesión</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="${pageContext.request.contextPath}/ControllerUsuario?keyword=IrAVerNoticias">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/iconoticia.png"
+            width="20px" height="20px"/>
+          Noticias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="${pageContext.request.contextPath}/ControllerUsuario?keyword=IrAVerServicios">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/icoservices.png"
+            width="20px" height="20px"/>
+          Servicios Públicos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="${pageContext.request.contextPath}/ControllerUsuario?keyword=IrAVerFiestas">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/icofiestas.png"
+            width="20px" height="20px"/>
+          Fiestas</a>
+        </li>
+        <c:if test="${rolusuario.getRol().contains('ADMINISTRADOR')}">
+          <li class="nav-item dropdown">
+          <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/icogestion.png"
+            width="20px" height="20px"/>Gestionar
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/ControllerAdmin?keyword=IrAGestionarNoticias">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/icoajustes.png"
+            width="20px" height="20px"/>
+            Gestionar Noticias</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li> 
+            <a class="dropdown-item" href="${pageContext.request.contextPath}/ControllerAdmin?keyword=IrAGestionServicios">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/icoajustes.png"
+            width="20px" height="20px"/>
+            Gestionar Servicios</a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/ControllerAdmin?keyword=IrAListaUsuarios">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/icoajustes.png"
+            width="20px" height="20px"/>
+            Gestionar Usuarios</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/ControllerAdmin?keyword=IrAGestionarFiestas">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/icoajustes.png"
+            width="20px" height="20px"/>
+            Gestionar Fiestas</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/ControllerAdmin?keyword=IrAGestionInterfaz">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/icoajustes.png"
+            width="20px" height="20px"/>
+            Gestionar Interfaz</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/ControllerAdmin?keyword=IrARecupUsuarios">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/icoajustes.png"
+            width="20px" height="20px"/>
+            Recuperación Usuarios</a></li>
+          </ul>
+        </li>
+        </c:if>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="${pageContext.request.contextPath}/ControllerUsuario?keyword=IrAComentarios">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/icocomentar.png"
+            width="20px" height="20px"/>
+          Comentar</a>
+        </li>
+         <li class="nav-item">
+           <a class="nav-link text-light" href="#" data-bs-toggle="offcanvas" data-bs-target="#sidebarcontacto" aria-controls="offcanvasNavbar">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/TeleRojo.png"
+            width="20px" height="20px"/>
+          Contacto</a>
+        </li>
+      </ul>
+      <div class="row justify-content-around">
+         <label class="text-light" style="margin-right:-30px;">Visitas: </label>
+         <span class="badge rounded-pill bg-dark" style="color:greenyellow;width:60px;font-size:25px;">${visitausuario.contador}</span>
+      </div>
+      <div class="me-5"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end" style="background-color:#007d6a;" tabindex="-1" id="sidebarcontacto" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel" class="text-light">Contactar con el Ayuntamiento</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#"><strong>Dirección: </strong> Pl. San Gil, 7, 45500 Torrijos, Toledo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"><strong>Teléfono:</strong> 925 77 08 01</a>
+          </li>
+        </ul>
+        <hr/>
+        <h2 class="text-light">Mapa: </h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d642.6845454438967!2d-4.287611536750997!3d39.98297354083377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1654072781761!5m2!1ses!2ses" 
+    width="370" height="250" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>  
